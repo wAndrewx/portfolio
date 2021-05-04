@@ -9,5 +9,6 @@
 
 Icons provided by
 ---
-[Github logo by iconmonstr](https://iconmonstr.com/)
+[Github logo by iconmonstr](https://iconmonstr.com/)  
+
 [LinkedIn logo by iconmonstr](https://iconmonstr.com/)
