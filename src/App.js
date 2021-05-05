@@ -3,7 +3,7 @@ import {
   ChakraProvider,
   Flex,
 } from '@chakra-ui/react';
-import { andrewTheme } from './theme/andrewTheme'
+import { andrewTheme } from './styles/andrewTheme'
 import { AndrewMain } from './components/AndrewMain';
 
 
