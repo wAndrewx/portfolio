@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/layout';
 
-export const Projects = () => {
+export const Description = () => {
   return <Box>
       
   </Box>;
