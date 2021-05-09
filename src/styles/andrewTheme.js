@@ -1,9 +1,10 @@
 import { extendTheme } from '@chakra-ui/react';
 import { ButtonStyles as Button } from './components/buttonStyles';
+import { mode } from '@chakra-ui/theme-tools';
 // import customStyle as chakraStyle from src
 
 const config = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: true,
 };
 
@@ -20,5 +21,14 @@ export const andrewTheme = extendTheme({
   },
   components: {
     Button,
-  },config
+  },
+  styles: {
+    global: props => ({
+      'body': {
+        color: mode('myDark', 'myLight')(props),
+        bg: mode('myLight', 'myDark')(props),
+        
+      },
+    }),
+  },
 });

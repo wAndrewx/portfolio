@@ -1,10 +1,7 @@
-import {
-  Flex,
-  useMediaQuery,
-} from '@chakra-ui/react';
-import { Social } from './main-src/Social';
-import { Clickables } from './main-src/Clickables';
-import { Logo } from './main-src/logo/Logo';
+import { Flex, useMediaQuery } from '@chakra-ui/react';
+import { Social } from './andrew-container/Social';
+import { Clickables } from './andrew-container/Clickables';
+import { Logo } from './andrew-container/Logo';
 
 export const AndrewMain = () => {
   const [isMobile] = useMediaQuery('(min-width:980px)');
@@ -15,9 +12,9 @@ export const AndrewMain = () => {
       justify="space-evenly"
       h="564px"
       px="4"
-      alignItems='start'
+      alignItems="start"
       // border='1px'
-      borderRadius='4'
+      borderRadius="4"
       // boxShadow='md'
     >
       <Logo />

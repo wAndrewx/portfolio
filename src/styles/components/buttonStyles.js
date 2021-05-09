@@ -1,4 +1,3 @@
-import { transform } from 'framer-motion';
 
 export const ButtonStyles = {
   // Styles for the base style
@@ -16,7 +15,7 @@ export const ButtonStyles = {
   // Styles for the visual style variations
   variants: {
     andrew: {
-      borderRadius: 'full',
+      borderRadius: '4',
       _hover: {
         transform: 'scale(1.08)',
       },

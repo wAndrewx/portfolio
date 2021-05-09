@@ -1,18 +1,18 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Flex,
-} from '@chakra-ui/react';
-import { andrewTheme } from './styles/andrewTheme'
+import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { andrewTheme } from './styles/andrewTheme';
 import { AndrewMain } from './components/AndrewMain';
-
+import { ColorSwitcher } from './components/ColorSwitcher';
 
 function App() {
   return (
     <ChakraProvider theme={andrewTheme}>
-        <Flex direction='column' align='center' justify='center' color='myLight' bg='myDark' w='100vw' h='100vh'>
+      <ColorSwitcher />
+      <Flex direction="column" justify="center" w="100vw" h='85vh'>
+        <Flex direction="column" align="center">
           <AndrewMain />
         </Flex>
+      </Flex>
     </ChakraProvider>
   );
 }

@@ -1,5 +1,0 @@
-const Projects = () => {
-  return <>
-      Test
-  </>;
-};
