@@ -12,8 +12,8 @@ export const Description = ({
   backgroundColor,
   colorStroke,
 }) => {
-  let description ='I am 21 years old and I currently attend as a student at the University of Manitoba, and my focus is currently web developing. I have a few hobbies which are playing games, weightlifting (pre covid) and building keyboards.'
-   
+  let description =
+    'I am 21 years old and I currently attend the University of Manitoba, and my primary focus is currently web developing. I have a few hobbies which are playing games, weightlifting (pre covid) and building keyboards.';
 
   return (
     <Modal
@@ -25,9 +25,11 @@ export const Description = ({
     >
       <ModalOverlay />
       <ModalContent backgroundColor={backgroundColor} colorStroke={colorStroke}>
-        <ModalHeader fontSize="2.5em" color='highlight'>About me</ModalHeader>
+        <ModalHeader fontSize="2.5em" color="highlight">
+          About me
+        </ModalHeader>
         <ModalBody fontSize="1.5em">{description}</ModalBody>
-        <ModalFooter alignSelf='start'>
+        <ModalFooter alignSelf="start">
           <Button variant="andrew" onClick={onClose}>
             Close
           </Button>

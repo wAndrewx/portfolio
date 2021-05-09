@@ -13,7 +13,7 @@ export const andrewTheme = extendTheme({
     myDark: '#1D1D1D',
     myLight: '#ECE8D8',
     highlight: '#F9AB37',
-    tertiary: '#B23A48',
+    tertiary: '#ED254E',
   },
   fonts: {
     heading: 'Kollektif-Bold',

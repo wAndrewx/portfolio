@@ -17,8 +17,7 @@ export const ProjectsContainer = ({
   backgroundColor,
   colorStroke,
 }) => {
-  const [...yeah] = projects;
-  console.log(yeah);
+  const [...projectObj] = projects;
 
   return (
     <Modal
@@ -31,10 +30,10 @@ export const ProjectsContainer = ({
     >
       <ModalOverlay />
       <ModalContent backgroundColor={backgroundColor} colorStroke={colorStroke}>
-        <ModalHeader fontSize="2em">Projects</ModalHeader>
+        <ModalHeader fontSize="2em" color='highlight' >Projects</ModalHeader>
         <ModalBody>
           <Flex direction="column">
-            {yeah.map(project => {
+            {projectObj.map(project => {
               return (
                 <Projects
                   projectTitle={project.title}

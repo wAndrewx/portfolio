@@ -25,25 +25,23 @@ export const Projects = ({
           rowSpan={1}
           colSpan={3}
           py="1"
-          color="highlight"
+          color="tertiary"
           fontSize="1.3em"
         >
-          <Text textShadow="0px 1px #1D1D1D">{projectTitle}</Text>
+          <Link href={projectLink}>
+            <Text textDecoration="underline">{projectTitle}</Text>
+          </Link>
         </GridItem>
         {/* IMAGE OF PROJECT */}
 
-        <GridItem
-          rowStart={2}
-          rowSpan={2}
-          colSpan={2}
-          rounded="4"
-        >
+        <GridItem rowStart={2} rowSpan={2} colSpan={2} rounded="4">
           <Link href={projectLink}>
             <Image
               fallbackSrc={projectImg}
               align="centre"
-              fit='cover'
-              aria-label='link to github repo for project'
+              fit="cover"
+              h="100%"
+              aria-label="link to github repo for project"
             />
           </Link>
         </GridItem>
@@ -58,11 +56,13 @@ export const Projects = ({
           {projectDesc}
         </GridItem>
         {/* GITHUB LINK */}
-        <GridItem colStart={1} colSpan={2}></GridItem>
+        <GridItem colStart={1} colSpan={2} rowStart={4} fontSize="0.5em">
+          Image redirects to github repo
+        </GridItem>
         {/* tags */}
         <GridItem colStart={3} colSpan={4}>
           {projectTags.map((item, i) => (
-            <Badge key={i} mr="1" colorScheme="messenger">
+            <Badge key={i} mr="1" colorScheme="gray">
               {item}
             </Badge>
           ))}
