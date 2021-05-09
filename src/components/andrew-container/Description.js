@@ -12,11 +12,8 @@ export const Description = ({
   backgroundColor,
   colorStroke,
 }) => {
-  let description =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do' +
-    'eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim' +
-    'ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut' +
-    'aliquip ex ea commodo consequat. Duis aute irure dolor in'
+  let description ='I am 21 years old and I currently attend as a student at the University of Manitoba, and my focus is currently web developing. I have a few hobbies which are playing games, weightlifting (pre covid) and building keyboards.'
+   
 
   return (
     <Modal
