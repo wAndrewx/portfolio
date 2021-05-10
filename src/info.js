@@ -21,7 +21,7 @@ export const projects = [
     id: '3',
     title: 'Object Manager',
     description:
-      'This was a school project and considered the hardest project where I earned full marks. The application was a mock memory manager that used linked lists, and used an implementation of a garbarge collector using double buffering. This project was very hard since this was a test of cumalitive knowledge of the whole course which was condensed into one project.',
+      'This was a school project and considered the hardest project where I earned full marks. The application was a mock memory manager that used linked lists, and used an implementation of a garbarge collector using double buffering. This project was challenging since this was a test of cumalitive knowledge of the whole course which was condensed into one project.',
     tags: ['C', 'Make', 'LLDB'],
     image: '',
     link: '',
