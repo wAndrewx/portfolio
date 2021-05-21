@@ -12,7 +12,7 @@ export const Clickables = () => {
   return (
     <Stack id="clickables" isInline spacing="58px">
       <Button
-        id="linkedin"
+        id="andrew-projects"
         variant="andrew"
         onClick={() => {
           onOpen();
@@ -20,7 +20,7 @@ export const Clickables = () => {
       >
         PROJECTS
       </Button>
-      <Button id="linkedin" variant="andrew">
+      <Button id="andrew-email" variant="andrew" as='a' href='mailto:contactandrewhuynh@gmail.com'>
         CONTACT
       </Button>
       <ProjectsContainer
