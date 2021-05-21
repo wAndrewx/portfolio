@@ -28,9 +28,7 @@ export const Projects = ({
           color="tertiary"
           fontSize="1.3em"
         >
-          <Link href={projectLink}>
-            <Text textDecoration="underline">{projectTitle}</Text>
-          </Link>
+          <Text textDecoration="underline">{projectTitle}</Text>
         </GridItem>
         {/* IMAGE OF PROJECT */}
 
@@ -51,7 +49,19 @@ export const Projects = ({
           rowStart={2}
           rowSpan={3}
           colSpan={4}
-          overflowY="scroll"
+          overflowY="auto"
+          css={{
+            '&::-webkit-scrollbar': {
+              width: '4px',
+            },
+            '&::-webkit-scrollbar-track': {
+              width: '6px',
+            },
+            '&::-webkit-scrollbar-thumb': {
+              background: 'red',
+              borderRadius: '24px',
+            },
+          }}
         >
           {projectDesc}
         </GridItem>

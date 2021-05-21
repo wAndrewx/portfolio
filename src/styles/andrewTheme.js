@@ -10,9 +10,9 @@ const config = {
 
 export const andrewTheme = extendTheme({
   colors: {
-    myDark: '#1D1D1D',
-    myLight: '#ECE8D8',
-    highlight: '#F9AB37',
+    myDark: '#101010',
+    myLight: '#FFFBE8',
+    highlight: '#ED254E',
     tertiary: '#ED254E',
   },
   fonts: {
@@ -24,10 +24,21 @@ export const andrewTheme = extendTheme({
   },
   styles: {
     global: props => ({
-      'body': {
+      body: {
         color: mode('myDark', 'myLight')(props),
         bg: mode('myLight', 'myDark')(props),
-        
+        css: {
+          '&::-webkit-scrollbar': {
+            width: '4px',
+          },
+          '&::-webkit-scrollbar-track': {
+            width: '6px',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: mode('myLight', 'myDark')(props),
+            borderRadius: '24px',
+          },
+        },
       },
     }),
   },

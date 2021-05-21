@@ -5,7 +5,7 @@ export const projects = [
     description:
       "The Pomodoro app is a full stack web application which features a time management method called Pomodoro Technique. The app allows users to sign up and login to see data ie.(how many times they've done the technique). The app was a joint project using new technologies. Learning the new libraries and frameworks helped gain a fundamental understanding with the new technologies.",
     tags: ['React (Next.js)', 'ChakraUI', 'NodeJS', 'Express', 'PostgreSQL'],
-    image: './images/tomato.png',
+    image: './images/pomodomo.png',
     link: 'https://github.com/khoaHyh/pomodomo',
   },
   {
