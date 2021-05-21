@@ -1,4 +1,4 @@
-import { Flex, useMediaQuery } from '@chakra-ui/react';
+import { Box, Flex, useMediaQuery } from '@chakra-ui/react';
 import { Social } from './andrew-container/Social';
 import { Clickables } from './andrew-container/Clickables';
 import { Logo } from './andrew-container/Logo';
@@ -8,17 +8,25 @@ export const AndrewMain = () => {
   return (
     <Flex
       direction="column"
-      align="center"
-      justify="space-evenly"
-      h="564px"
+      justify="center"
+      h={['md', 'md', 'lg', 'xl']}
+      w={['s', 'md', 'lg', 'xl']}
+      mx="4"
       px="4"
-      alignItems="start"
-      rounded='lg'
-      boxShadow='2xl'
+      alignItems="center"
+      rounded="lg"
+      boxShadow="xl"
     >
-      <Logo />
-      <Social />
-      <Clickables />
+      <Box
+        d="flex"
+        flexDirection="column"
+        justifyContent="space-evenly"
+        h="100%"
+      >
+        <Logo />
+        <Social />
+        <Clickables />
+      </Box>
     </Flex>
   );
 };
