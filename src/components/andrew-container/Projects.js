@@ -2,8 +2,8 @@ import { Image } from '@chakra-ui/image';
 import { Divider, Link } from '@chakra-ui/layout';
 import { Text } from '@chakra-ui/layout';
 import { Badge } from '@chakra-ui/layout';
-import { Box, Flex, Heading, Grid, GridItem } from '@chakra-ui/layout';
-import { whiten,darken } from '@chakra-ui/theme-tools';
+import { Box, Grid, GridItem } from '@chakra-ui/layout';
+import { whiten } from '@chakra-ui/theme-tools';
 
 export const Projects = ({
   projectTitle,
@@ -19,31 +19,27 @@ export const Projects = ({
         templateRows="repeat(5, 1fr)"
         templateColumns="repeat(6, 1fr)"
         gap={2}
-        
       >
         {/* TITLE OF PROJECT */}
-        <GridItem
-          rowSpan={1}
-          colSpan={6}
-          color="tertiary"
-          fontSize="1.3em"
-        >
-          <Text >{projectTitle}</Text>
-        <Divider></Divider>
-
+        <GridItem rowSpan={1} colSpan={6} color="tertiary" fontSize="1.3em">
+          <Text>{projectTitle}</Text>
+          <Divider></Divider>
         </GridItem>
         {/* IMAGE OF PROJECT */}
 
-        <GridItem rowStart={2} rowSpan={2} colSpan={2} rounded="4">
-          <Link href={projectLink}>
-            <Image
-              fallbackSrc={projectImg}
-              align="centre"
-              fit="scale-down"
-              aria-label="link to github repo for project"
-            ></Image>
-          </Link>
-        </GridItem>
+        {projectImg && (
+          <GridItem rowStart={2} rowSpan={2} colSpan={2} rounded="4">
+            <Link href={projectLink}>
+              <Image
+                fallbackSrc={projectImg}
+                align="centre"
+                fit="scale-down"
+                aria-label="link to github repo for project"
+                alt="github_project"
+              ></Image>
+            </Link>
+          </GridItem>
+        )}
         {/* Description */}
         <GridItem
           colStart={3}
@@ -67,11 +63,11 @@ export const Projects = ({
         >
           {projectDesc}
         </GridItem>
-     
+
         {/* tags */}
         <GridItem colStart={3} colSpan={4}>
           {projectTags.map((item, i) => (
-            <Badge key={i} mr="1" colorScheme="gray">
+            <Badge key={(item, ':', i)} mr="1" colorScheme="gray">
               {item}
             </Badge>
           ))}

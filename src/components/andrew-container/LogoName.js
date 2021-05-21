@@ -4,10 +4,10 @@ import { Tooltip } from '@chakra-ui/tooltip';
 export const LogoName = ({colorStroke,backgroundColor}) => {
   return (
     <Tooltip
-      label="ABOUT ME"
+      label="Read More About Me"
       bg={colorStroke}
       color={backgroundColor}
-      placement="top-start"
+      placement="auto"
       rounded="4"
       hasArrow
       arrowShadowColor={backgroundColor}

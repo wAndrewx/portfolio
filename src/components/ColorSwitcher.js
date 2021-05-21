@@ -1,8 +1,7 @@
 import { IconButton } from '@chakra-ui/button';
 import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { Flex, Stack } from '@chakra-ui/layout';
-import { Box } from '@chakra-ui/layout';
+import {  Stack } from '@chakra-ui/layout';
 
 export const ColorSwitcher = () => {
   const { colorMode, toggleColorMode } = useColorMode();

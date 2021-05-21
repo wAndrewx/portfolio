@@ -10,8 +10,7 @@ import {
 } from '@chakra-ui/modal';
 import { Button } from '@chakra-ui/button';
 import { projects } from '../../info';
-import { darken, mode, whiten } from '@chakra-ui/theme-tools';
-import { useColorModeValue } from '@chakra-ui/color-mode';
+import { whiten } from '@chakra-ui/theme-tools';
 
 export const ProjectsContainer = ({
   onClose,
@@ -62,7 +61,7 @@ export const ProjectsContainer = ({
                   projectTags={project.tags}
                   projectImg={project.image}
                   projectLink={project.link}
-                  id={project.id}
+                  key={('project;', project.id)}
                 />
               );
             })}
