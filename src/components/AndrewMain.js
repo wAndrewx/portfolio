@@ -13,9 +13,8 @@ export const AndrewMain = () => {
       h="564px"
       px="4"
       alignItems="start"
-      // border='1px'
-      borderRadius="4"
-      // boxShadow='md'
+      rounded='lg'
+      boxShadow='2xl'
     >
       <Logo />
       <Social />

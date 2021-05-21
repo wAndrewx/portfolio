@@ -8,8 +8,8 @@ function App() {
   return (
     <ChakraProvider theme={andrewTheme}>
       <ColorSwitcher />
-      <Flex direction="column" justify="center" w="100vw" h='85vh'>
-        <Flex direction="column" align="center">
+      <Flex direction="column" justify="center" w="100vw" h="85vh">
+        <Flex direction="column" justifySelf="center" align="center">
           <AndrewMain />
         </Flex>
       </Flex>

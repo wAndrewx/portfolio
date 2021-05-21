@@ -5,15 +5,13 @@ import { mode } from '@chakra-ui/theme-tools';
 
 const config = {
   initialColorMode: 'light',
-  useSystemColorMode: true,
 };
 
 export const andrewTheme = extendTheme({
   colors: {
     myDark: '#101010',
-    myLight: '#FFFBE8',
-    highlight: '#ED254E',
-    tertiary: '#ED254E',
+    myLight: '#FFFFFF',
+    // highlight: '#A71734',
   },
   fonts: {
     heading: 'Kollektif-Bold',
@@ -27,18 +25,6 @@ export const andrewTheme = extendTheme({
       body: {
         color: mode('myDark', 'myLight')(props),
         bg: mode('myLight', 'myDark')(props),
-        css: {
-          '&::-webkit-scrollbar': {
-            width: '4px',
-          },
-          '&::-webkit-scrollbar-track': {
-            width: '6px',
-          },
-          '&::-webkit-scrollbar-thumb': {
-            background: mode('myLight', 'myDark')(props),
-            borderRadius: '24px',
-          },
-        },
       },
     }),
   },

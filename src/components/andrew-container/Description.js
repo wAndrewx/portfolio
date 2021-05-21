@@ -25,7 +25,7 @@ export const Description = ({
     >
       <ModalOverlay />
       <ModalContent backgroundColor={backgroundColor} colorStroke={colorStroke}>
-        <ModalHeader fontSize="2.5em" color="highlight">
+        <ModalHeader fontSize="2.5em" color="">
           About me
         </ModalHeader>
         <ModalBody fontSize="1.5em">{description}</ModalBody>

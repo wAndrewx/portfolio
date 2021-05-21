@@ -1,4 +1,4 @@
-import { Box, Flex, Stack } from '@chakra-ui/layout';
+import { Divider, Flex, Text } from '@chakra-ui/layout';
 import { Projects } from './Projects';
 import {
   ModalOverlay,
@@ -10,6 +10,8 @@ import {
 } from '@chakra-ui/modal';
 import { Button } from '@chakra-ui/button';
 import { projects } from '../../info';
+import { darken, mode, whiten } from '@chakra-ui/theme-tools';
+import { useColorModeValue } from '@chakra-ui/color-mode';
 
 export const ProjectsContainer = ({
   onClose,
@@ -30,8 +32,27 @@ export const ProjectsContainer = ({
     >
       <ModalOverlay />
       <ModalContent backgroundColor={backgroundColor} colorStroke={colorStroke}>
-        <ModalHeader fontSize="2em" color='highlight' >Projects</ModalHeader>
-        <ModalBody>
+        <ModalHeader fontSize="2em" >
+          Projects
+          <Text fontSize="xs">Click images for repository</Text>
+        </ModalHeader>
+        <Divider></Divider>
+        <ModalBody
+          overflow="auto"
+          css={props => ({
+            '&::-webkit-scrollbar': {
+              width: '4px',
+            },
+            '&::-webkit-scrollbar-track': {
+              width: '6px',
+            },
+            '&::-webkit-scrollbar-thumb': {
+              background: whiten('#101010', 40)(props),
+              borderRadius: '24px',
+            },
+            'scrollbar-width': 'thin',
+          })}
+        >
           <Flex direction="column">
             {projectObj.map(project => {
               return (

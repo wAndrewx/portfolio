@@ -15,7 +15,6 @@ export const LogoName = ({colorStroke,backgroundColor}) => {
       <Text
         fontSize="4em"
         fontWeight="bold"
-        color="highlight"
         lineHeight={['55px']}
       >
         ANDREW HUYNH

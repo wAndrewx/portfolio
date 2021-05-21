@@ -1,8 +1,9 @@
 import { Image } from '@chakra-ui/image';
-import { Link } from '@chakra-ui/layout';
+import { Divider, Link } from '@chakra-ui/layout';
 import { Text } from '@chakra-ui/layout';
 import { Badge } from '@chakra-ui/layout';
 import { Box, Flex, Heading, Grid, GridItem } from '@chakra-ui/layout';
+import { whiten,darken } from '@chakra-ui/theme-tools';
 
 export const Projects = ({
   projectTitle,
@@ -18,17 +19,18 @@ export const Projects = ({
         templateRows="repeat(5, 1fr)"
         templateColumns="repeat(6, 1fr)"
         gap={2}
-        my="2"
+        
       >
         {/* TITLE OF PROJECT */}
         <GridItem
           rowSpan={1}
-          colSpan={3}
-          py="1"
+          colSpan={6}
           color="tertiary"
           fontSize="1.3em"
         >
-          <Text textDecoration="underline">{projectTitle}</Text>
+          <Text >{projectTitle}</Text>
+        <Divider></Divider>
+
         </GridItem>
         {/* IMAGE OF PROJECT */}
 
@@ -37,10 +39,9 @@ export const Projects = ({
             <Image
               fallbackSrc={projectImg}
               align="centre"
-              fit="cover"
-              h="100%"
+              fit="scale-down"
               aria-label="link to github repo for project"
-            />
+            ></Image>
           </Link>
         </GridItem>
         {/* Description */}
@@ -50,7 +51,7 @@ export const Projects = ({
           rowSpan={3}
           colSpan={4}
           overflowY="auto"
-          css={{
+          css={props => ({
             '&::-webkit-scrollbar': {
               width: '4px',
             },
@@ -58,17 +59,15 @@ export const Projects = ({
               width: '6px',
             },
             '&::-webkit-scrollbar-thumb': {
-              background: 'red',
+              background: whiten('#101010', 20)(props),
               borderRadius: '24px',
             },
-          }}
+            'scrollbar-width': 'thin',
+          })}
         >
           {projectDesc}
         </GridItem>
-        {/* GITHUB LINK */}
-        <GridItem colStart={1} colSpan={2} rowStart={4} fontSize="0.5em">
-          Image redirects to github repo
-        </GridItem>
+     
         {/* tags */}
         <GridItem colStart={3} colSpan={4}>
           {projectTags.map((item, i) => (
