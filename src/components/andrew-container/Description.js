@@ -13,7 +13,7 @@ export const Description = ({
   colorStroke,
 }) => {
   let description =
-    'I am 21 years old based in  Toronto, Canada, and I currently attend the University of Manitoba majoring in Computer Science, and my primary focus is currently Web Developing. I have a few hobbies which are playing games, weightlifting (pre covid) and building keyboards.';
+    'I am developer 21 years old based in Toronto, Canada, and I currently attend the University of Manitoba majoring in Computer Science, and my primary focus is currently Web Developing. I few hobbies which include gaming, weightlifting (pre covid) and building keyboards.';
 
   return (
     <Modal
