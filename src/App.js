@@ -7,8 +7,8 @@ import { ColorSwitcher } from './components/ColorSwitcher';
 function App() {
   return (
     <ChakraProvider theme={andrewTheme}>
-      <ColorSwitcher />
-      <Flex direction="column" justify="center" w="100vw" h="85vh">
+        <ColorSwitcher />
+      <Flex direction="column" justify="center" w="100vw" h="96vh">
         <Flex direction="column" justifySelf="center" align="center">
           <AndrewMain />
         </Flex>

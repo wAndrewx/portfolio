@@ -10,7 +10,7 @@ export const ColorSwitcher = () => {
     toggleColorMode();
   };
   return (
-    <Stack direction='row' justifyContent='flex-end' p='4' >
+    <Stack direction='row' justifyContent='flex-end' p='4' h='4vh' >
       <IconButton
         aria-label="colormode-toggle"
         icon={colorMode === 'dark' ? <MoonIcon /> : <SunIcon />}
