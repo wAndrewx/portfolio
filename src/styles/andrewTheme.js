@@ -8,6 +8,7 @@ const config = {
 };
 
 export const andrewTheme = extendTheme({
+  config,
   colors: {
     myDark: '#101010',
     myLight: '#FFFFFF',

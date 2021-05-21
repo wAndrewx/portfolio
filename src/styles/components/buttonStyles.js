@@ -1,4 +1,3 @@
-
 export const ButtonStyles = {
   // Styles for the base style
   baseStyle: {
@@ -6,12 +5,14 @@ export const ButtonStyles = {
     letterSpacing: '0.19em',
     color: 'tertiary',
     fontWeight: 'light',
-    fontSize: '36px',
     border: '1px',
     justifyContent: 'center',
+    textTransform: "uppercase",
   },
   // Styles for the size variations
-  sizes: {},
+  sizes: {
+    
+  },
   // Styles for the visual style variations
   variants: {
     andrew: {
@@ -25,5 +26,7 @@ export const ButtonStyles = {
     },
   },
   // The default `size` or `variant` values
-  defaultProps: {},
+  defaultProps: {
+    
+  },
 };

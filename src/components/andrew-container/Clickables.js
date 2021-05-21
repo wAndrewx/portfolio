@@ -10,17 +10,24 @@ export const Clickables = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Stack id="clickables" isInline spacing="58px">
+    <Stack id="clickables" isInline spacing="58px" fontSize="1.2em">
       <Button
         id="andrew-projects"
         variant="andrew"
+        fontSize={['0.7em', '0.9em', '1em']}
         onClick={() => {
           onOpen();
         }}
       >
         PROJECTS
       </Button>
-      <Button id="andrew-email" variant="andrew" as='a' href='mailto:contactandrewhuynh@gmail.com'>
+      <Button
+        id="andrew-email"
+        variant="andrew"
+        fontSize={['0.7em', '0.9em', '1em']}
+        as="a"
+        href="mailto:contactandrewhuynh@gmail.com"
+      >
         CONTACT
       </Button>
       <ProjectsContainer

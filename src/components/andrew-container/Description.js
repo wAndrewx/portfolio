@@ -28,9 +28,13 @@ export const Description = ({
         <ModalHeader fontSize="2.5em" color="">
           About me
         </ModalHeader>
-        <ModalBody fontSize="1.5em">{description}</ModalBody>
+        <ModalBody fontSize="1.1em">{description}</ModalBody>
         <ModalFooter alignSelf="start">
-          <Button variant="andrew" onClick={onClose}>
+          <Button
+            variant="andrew"
+            fontSize={['0.7em', '0.9em', '1em']}
+            onClick={onClose}
+          >
             Close
           </Button>
         </ModalFooter>

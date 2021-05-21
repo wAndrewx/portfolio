@@ -32,7 +32,7 @@ export const ProjectsContainer = ({
     >
       <ModalOverlay />
       <ModalContent backgroundColor={backgroundColor} colorStroke={colorStroke}>
-        <ModalHeader fontSize="2em" >
+        <ModalHeader fontSize="2em">
           Projects
           <Text fontSize="xs">Click images for repository</Text>
         </ModalHeader>
@@ -69,7 +69,11 @@ export const ProjectsContainer = ({
           </Flex>
         </ModalBody>
         <ModalFooter alignSelf="start">
-          <Button variant="andrew" onClick={onClose}>
+          <Button
+            variant="andrew"
+            fontSize={['0.7em', '0.9em', '1em']}
+            onClick={onClose}
+          >
             Close
           </Button>
         </ModalFooter>
