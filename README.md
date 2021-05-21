@@ -16,5 +16,10 @@
 
 ## TODO - List
 ---
-- [ ] Still have to add a contact form - for now a clipboard to my email could be an alternative
+- [ ] Still have to add a contact form 
 - [ ] integrate gatsby 
+- [ ] Color Palette change
+- [ ] Reformat projects card
+
+
+
