@@ -22,7 +22,6 @@ export const Clickables = () => {
 
   const [isMobile] = useMediaQuery('(min-width:1280px)');
 
-  console.log(isMobile);
   return (
     <Stack
       direction={['column', 'column', 'column', 'column', 'row']}

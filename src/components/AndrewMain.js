@@ -20,6 +20,7 @@ export const AndrewMain = () => {
         flexDirection="column"
         justifyContent="space-evenly"
         h="100%"
+        mx={2}
       >
         <Logo />
         <Social />
