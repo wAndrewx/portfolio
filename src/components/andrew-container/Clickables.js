@@ -28,7 +28,7 @@ export const Clickables = () => {
       direction={['column', 'column', 'column', 'column', 'row']}
       id="clickables"
       // isInline
-      spacing={[3, 4, 5, 6]}
+      spacing={[3, 4, 5, 5]}
     >
       {/* ABOUT ME */}
       {!isMobile && (
