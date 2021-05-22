@@ -49,7 +49,7 @@ export const ProjectsContainer = ({
               background: whiten('#101010', 40)(props),
               borderRadius: '24px',
             },
-            'scrollbar-width': 'thin',
+            'scrollbarWidth': 'thin',
           })}
         >
           <Flex direction="column">
