@@ -30,7 +30,11 @@ export const ProjectsContainer = ({
       size="xl"
     >
       <ModalOverlay />
-      <ModalContent backgroundColor={backgroundColor} colorStroke={colorStroke}>
+      <ModalContent
+        backgroundColor={backgroundColor}
+        colorStroke={colorStroke}
+        mx={2}
+      >
         <ModalHeader fontSize="2em">
           Projects
           <Text fontSize="xs">Click images for repository</Text>
@@ -49,7 +53,7 @@ export const ProjectsContainer = ({
               background: whiten('#101010', 40)(props),
               borderRadius: '24px',
             },
-            'scrollbarWidth': 'thin',
+            scrollbarWidth: 'thin',
           })}
         >
           <Flex direction="column">

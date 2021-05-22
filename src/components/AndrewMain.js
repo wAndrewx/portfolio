@@ -10,8 +10,7 @@ export const AndrewMain = () => {
       justify="center"
       h={['md', 'md', 'lg', 'xl']}
       w={['s', 'md', 'lg', 'xl']}
-      mx="4"
-      px="4"
+      px={4}
       alignItems="center"
       rounded="lg"
       boxShadow="xl"

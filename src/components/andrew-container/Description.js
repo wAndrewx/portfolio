@@ -26,8 +26,12 @@ export const Description = ({
       scrollBehavior={'inside'}
     >
       <ModalOverlay />
-      <ModalContent backgroundColor={backgroundColor} colorStroke={colorStroke}>
-        <ModalHeader fontSize="2.5em" color="">
+      <ModalContent
+        backgroundColor={backgroundColor}
+        colorStroke={colorStroke}
+        mx={2}
+      >
+        <ModalHeader fontSize="2.5em" lineHeight={1}>
           Quick biography
         </ModalHeader>
         <ModalBody fontSize="1.1em">{description}</ModalBody>
