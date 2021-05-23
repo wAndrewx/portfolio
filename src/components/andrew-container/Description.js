@@ -13,7 +13,7 @@ export const Description = ({
   colorStroke,
 }) => {
   let description =
-    'I am developer based in Toronto, Canada, who is currently a student ' +
+    'I am a developer based in Toronto, Canada, who is currently a student ' +
     'majoring in Computer Science. ' +
     'I have a few hobbies which include gaming, weightlifting (pre covid) and building keyboards.';
 
