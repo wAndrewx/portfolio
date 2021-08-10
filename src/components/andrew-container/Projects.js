@@ -1,16 +1,16 @@
 import { Image } from '@chakra-ui/image';
 import { Divider, Link } from '@chakra-ui/layout';
-import { Text } from '@chakra-ui/layout';
 import { Badge } from '@chakra-ui/layout';
 import { Box, Grid, GridItem } from '@chakra-ui/layout';
 import { whiten } from '@chakra-ui/theme-tools';
 
 export const Projects = ({
   projectTitle,
+  projectLink,
   projectDesc,
   projectTags,
   projectImg,
-  projectLink,
+  projectGithubLink,
 }) => {
   return (
     <Box>
@@ -22,14 +22,14 @@ export const Projects = ({
       >
         {/* TITLE OF PROJECT */}
         <GridItem rowSpan={1} colSpan={6} color="tertiary" fontSize="1.3em">
-          <Text>{projectTitle}</Text>
+          <Link href={projectLink}>{projectTitle}</Link>
           <Divider></Divider>
         </GridItem>
         {/* IMAGE OF PROJECT */}
 
         {projectImg && (
           <GridItem rowStart={2} rowSpan={2} colSpan={2} rounded="4">
-            <Link href={projectLink}>
+            <Link href={projectGithubLink}>
               <Image
                 fallbackSrc={projectImg}
                 align="centre"

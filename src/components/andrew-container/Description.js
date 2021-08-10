@@ -15,7 +15,7 @@ export const Description = ({
   let description =
     'I am a developer based in Toronto, Canada, who is currently a student ' +
     'majoring in Computer Science. ' +
-    'I have a few hobbies which include gaming, weightlifting (pre covid) and building keyboards.';
+    'I have a many interests which include, male fashion, cryptocurrency, political philosophy, gaming, weightlifting (pre covid) and building keyboards.';
 
   return (
     <Modal

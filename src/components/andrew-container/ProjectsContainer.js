@@ -37,7 +37,7 @@ export const ProjectsContainer = ({
       >
         <ModalHeader fontSize="2em">
           Projects
-          <Text fontSize="xs">Click images for repository</Text>
+          <Text fontSize="xs">Click images for repository and title for demo</Text>
         </ModalHeader>
         <Divider></Divider>
         <ModalBody
@@ -64,6 +64,7 @@ export const ProjectsContainer = ({
                   projectDesc={project.description}
                   projectTags={project.tags}
                   projectImg={project.image}
+                  projectGithubLink={project.projectGithubLink}
                   projectLink={project.link}
                   key={('project;', project.id)}
                 />
