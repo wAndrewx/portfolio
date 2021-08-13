@@ -30,7 +30,7 @@ export const projects = [
     id: '3',
     title: 'Fullstack Twitter Mock App',
     description:
-      'This was my take on how twitter would be implemented with Express utilising various protocols such as HTTP, and Websockets stored on a NoSQL database. The app leveraged websockets to get live tweets, and a RESTFUL api for multiple resources. Working and developing this app solidified my fundamental understanding in protocols and security for web developing ',
+      'This was my take on how twitter would be implemented with Express utilising various protocols such as HTTP, and Websockets stored on a NoSQL database. The app leveraged websockets to receive live tweets, and a RESTFUL api for multiple resources. Working and developing this app solidified my fundamental understanding in protocols and security for web developing ',
     tags: [
       'Javascript',
       'React',
@@ -41,7 +41,7 @@ export const projects = [
       'SocketIO',
     ],
     image: '',
-    link: '',
+    link: 'https://github.com/wAndrewx/kebab-api',
     projectGithubLink: 'https://github.com/wAndrewx/kebab-api',
   },
   {
