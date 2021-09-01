@@ -30,7 +30,7 @@ export const projects = [
     id: '3',
     title: 'Fullstack Twitter Mock App',
     description:
-      'This was my take on how twitter\'s tweets and authentication would be implemented with Express, and storing tweets and user data on a NoSQL database. The app used Serverless framework to launch on AWS Lambda so I could utilised FaaS. Developing this app gave me an understanding on system design and further knowledge on security. ',
+      'This was my take on how Twitter\'s tweets and authentication would be implemented with Express, and storing tweets and user data on a NoSQL database. The app used Serverless framework to launch on AWS Lambda so I could utilised FaaS. Developing this app gave me an understanding on system design and further knowledge on security. ',
     tags: [
       'Serverless',
       'AWS',
@@ -41,8 +41,8 @@ export const projects = [
       'Mongoose',
       'Javascript',
     ],
-    image: '',
-    link: 'https://github.com/wAndrewx/kebab-api',
+    image: './images/twitter-mock.jpg',
+    link: 'https://twittermock.netlify.app/',
     projectGithubLink: 'https://github.com/wAndrewx/kebab-api',
   },
   {
