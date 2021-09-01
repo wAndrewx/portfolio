@@ -18,16 +18,6 @@ export const projects = [
   },
   {
     id: '2',
-    title: 'Portfolio',
-    description:
-      'This was a project to display my other projects. It was designed in Figma by me (Andrew Huynh) and was intended to be minimal. This app gave me a better understanding to responsive UI designing, styling and an alternative way to learn CSS.',
-    tags: ['Javascript', 'React', 'ChakraUI', 'Figma'],
-    image: './images/port.png',
-    link: 'https://www.andrewhuynh.ca',
-    projectGithubLink: 'https://github.com/wAndrewx/portfolio',
-  },
-  {
-    id: '3',
     title: 'Fullstack Twitter Mock App',
     description:
       'This was my take on how Twitter\'s tweets and authentication would be implemented with Express, and storing tweets and user data on a NoSQL database. The app used Serverless framework to launch on AWS Lambda so I could utilised FaaS. Developing this app gave me an understanding on system design and further knowledge on security. ',
@@ -45,6 +35,17 @@ export const projects = [
     link: 'https://twittermock.netlify.app/',
     projectGithubLink: 'https://github.com/wAndrewx/kebab-api',
   },
+  {
+    id: '3',
+    title: 'Portfolio',
+    description:
+      'This was a project to display my other projects. It was designed in Figma by me (Andrew Huynh) and was intended to be minimal. This app gave me a better understanding to responsive UI designing, styling and an alternative way to learn CSS.',
+    tags: ['Javascript', 'React', 'ChakraUI', 'Figma'],
+    image: './images/port.png',
+    link: 'https://www.andrewhuynh.ca',
+    projectGithubLink: 'https://github.com/wAndrewx/portfolio',
+  },
+  
   {
     id: '4',
     title: 'Object Manager',
