@@ -3,7 +3,7 @@ import { Divider, Link } from '@chakra-ui/layout';
 import { Badge } from '@chakra-ui/layout';
 import { Box, Grid, GridItem } from '@chakra-ui/layout';
 import { whiten } from '@chakra-ui/theme-tools';
-
+import { Button, ButtonGroup } from '@chakra-ui/react';
 export const Projects = ({
   projectTitle,
   projectLink,
@@ -28,18 +28,26 @@ export const Projects = ({
         {/* IMAGE OF PROJECT */}
 
         {projectImg && (
-          <GridItem rowStart={2} rowSpan={2} colSpan={2} rounded="4">
-            <Link href={projectGithubLink}>
-              <Image
-                fallbackSrc={projectImg}
-                align="centre"
-                fit="scale-down"
-                aria-label="link to github repo for project"
-                alt="github_project"
-              ></Image>
-            </Link>
+          <GridItem rowStart={2} colSpan={2}>
+            <Image
+              fallbackSrc={projectImg}
+              align="centre"
+              fit="scale"
+              aria-label="link to github repo for project"
+              alt="github_project"
+            ></Image>
           </GridItem>
         )}
+        <GridItem colSpan="2" rowSpan="1">
+          <Link href={projectLink}>
+            <Button variant='andrew' w="100%">Demo</Button>
+          </Link>
+        </GridItem>
+        <GridItem colSpan="2" rowSpan="1">
+          <Link href={projectGithubLink}>
+            <Button variant='andrew' w="100%">Github</Button>
+          </Link>
+        </GridItem>
         {/* Description */}
         <GridItem
           colStart={3}
@@ -67,7 +75,12 @@ export const Projects = ({
         {/* tags */}
         <GridItem colStart={3} colSpan={4}>
           {projectTags.map((item, i) => (
-            <Badge key={(item, ':', i)} mr="1" colorScheme="gray">
+            <Badge
+              key={(item, ':', i)}
+              mr="1"
+              colorScheme="green"
+              rounded="full"
+            >
               {item}
             </Badge>
           ))}

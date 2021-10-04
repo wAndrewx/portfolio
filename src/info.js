@@ -18,9 +18,27 @@ export const projects = [
   },
   {
     id: '2',
+    title: 'Coin Balance',
+    description:
+      "Coin balance is a PERN stack app which displays current market data on coins using MetaMask and EthPlorer's API. The front end is built using NextJS and the backend was built using an Express app. Info was stored on PostgresSQL and is hosted on EC2 instances",
+    tags: [
+      'Typescript',
+      'NextJS',
+      'PostgresSQL',
+      'ExpressJS',
+      'NodeJS',
+      'AWS EC2',
+      'PM2',
+    ],
+    image: './images/coinbalance.png',
+    link: 'coin-balance.vercel.app',
+    projectGithubLink: 'https://github.com/wAndrewx/coin-wallet-data-server',
+  },
+  {
+    id: '3',
     title: 'Fullstack Twitter Mock App',
     description:
-      'This was my take on how Twitter\'s tweets and authentication would be implemented with Express, and storing tweets and user data on a NoSQL database. The app used Serverless framework to launch on AWS Lambda so I could utilised FaaS. Developing this app gave me an understanding on system design and further knowledge on security. ',
+      'This was my take on how handling tweets and authentication would be implemented with Express, and storing tweets and user data on a NoSQL database. The app used Serverless framework to launch on AWS Lambda so I could utilised FaaS. Developing this app gave me an understanding on system design and further knowledge on security. ',
     tags: [
       'Serverless',
       'AWS',
@@ -36,7 +54,7 @@ export const projects = [
     projectGithubLink: 'https://github.com/wAndrewx/kebab-api',
   },
   {
-    id: '3',
+    id: '4',
     title: 'Portfolio',
     description:
       'This was a project to display my other projects. It was designed in Figma by me (Andrew Huynh) and was intended to be minimal. This app gave me a better understanding to responsive UI designing, styling and an alternative way to learn CSS.',
@@ -44,16 +62,5 @@ export const projects = [
     image: './images/port.png',
     link: 'https://www.andrewhuynh.ca',
     projectGithubLink: 'https://github.com/wAndrewx/portfolio',
-  },
-  
-  {
-    id: '4',
-    title: 'Object Manager',
-    description:
-      'This was a school project and considered the hardest project where I earned full marks. The application was a mock memory manager that used linked lists, and had an implementation of a garbarge collector with the double buffering method. This project was challenging since this was a test of cumalitive knowledge on the whole course condensed into one project.',
-    tags: ['C', 'LLDB'],
-    image: '',
-    link: '',
-    projectGithubLink: '',
   },
 ];
