@@ -17,9 +17,10 @@
 ## TODO - List
 ---
 - [ ] Still have to add a contact form 
-- [ ] integrate gatsby 
+- [ ] Migration to gatsby 
 - [ ] Color Palette change
 - [ ] Reformat projects card
+- [ ] Migration to TypeScript
 
 
 
