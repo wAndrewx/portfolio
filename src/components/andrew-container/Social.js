@@ -1,5 +1,6 @@
 import { Image } from '@chakra-ui/image';
 import { Link, Stack } from '@chakra-ui/layout';
+import React from 'react';
 
 export const Social = () => {
   return (
@@ -10,7 +11,7 @@ export const Social = () => {
           id="github_profile"
           bgGradient="radial(myLight 60%,transparent 61%)"
           borderRadius="full"
-          fallbackSrc="./images/iconmonstr-github.png"
+          fallbackSrc="../images/iconmonstr-github.png"
           align="centre"
           boxSize={['48px', '56px']}
           w={['48px', '56px']}

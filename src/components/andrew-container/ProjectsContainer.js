@@ -11,6 +11,7 @@ import {
 import { Button } from '@chakra-ui/button';
 import { projects } from '../../info';
 import { whiten } from '@chakra-ui/theme-tools';
+import React from 'react';
 
 export const ProjectsContainer = ({
   onClose,

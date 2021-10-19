@@ -4,6 +4,8 @@ import { Badge } from '@chakra-ui/layout';
 import { Box, Grid, GridItem } from '@chakra-ui/layout';
 import { whiten } from '@chakra-ui/theme-tools';
 import { Button, ButtonGroup } from '@chakra-ui/react';
+import React from 'react';
+
 export const Projects = ({
   projectTitle,
   projectLink,

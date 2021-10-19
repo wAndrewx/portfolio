@@ -3,6 +3,7 @@ import { useDisclosure } from '@chakra-ui/hooks';
 import {  Stack } from '@chakra-ui/layout';
 import { Description } from './Description';
 import { LogoName } from './LogoName';
+import React from 'react';
 
 export const Logo = () => {
   const backgroundColor = useColorModeValue('myLight', 'myDark');

@@ -2,6 +2,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import { Social } from './andrew-container/Social';
 import { Clickables } from './andrew-container/Clickables';
 import { Logo } from './andrew-container/Logo';
+import React from 'react';
 
 export const AndrewMain = () => {
   return (

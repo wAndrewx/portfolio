@@ -1,5 +1,6 @@
 import { Text } from '@chakra-ui/layout';
 import { Tooltip } from '@chakra-ui/tooltip';
+import React from 'react';
 
 export const LogoName = ({colorStroke,backgroundColor}) => {
   return (

@@ -5,6 +5,7 @@ import { Stack } from '@chakra-ui/layout';
 import { ProjectsContainer } from './ProjectsContainer';
 import { useMediaQuery } from '@chakra-ui/react';
 import { Description } from './Description';
+import React from 'react';
 
 export const Clickables = () => {
   const backgroundColor = useColorModeValue('myLight', 'myDark');
