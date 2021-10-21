@@ -24,26 +24,28 @@ export const Clickables = () => {
   const [isMobile] = useMediaQuery('(min-width:1280px)');
 
   return (
-    <Stack
-      direction={['column', 'column', 'column', 'column', 'row']}
-      id="clickables"
-      // isInline
-      spacing={[3, 4, 5, 5]}
-    >
-      {/* ABOUT ME */}
-      {!isMobile && (
-        <Button
-          id="andrew-about"
-          variant="andrew"
-          fontSize={['0.8em', '0.9em', '1em']}
-          letterSpacing={3}
-          onClick={() => {
-            onOpenDesc();
-          }}
-        >
-          About me
-        </Button>
-      )}
+    <Stack direction="column" id="clickables">
+      <Button
+        id="andrew-linkedin"
+        variant="andrew"    
+        fontSize={['0.8em', '0.9em', '1em']}
+        letterSpacing={3}
+        as="a"
+        href="https://www.linkedin.com/in/andrew-huynh-/"
+      >
+        LinkedIn
+      </Button>
+      {/* EMAIL CONTACT */}
+      <Button
+        id="andrew-email"
+        variant="andrew"
+        fontSize={['0.8em', '0.9em', '1em']}
+        letterSpacing={3}
+        as="a"
+        href="mailto:contactandrewhuynh@gmail.com"
+      >
+        CONTACT
+      </Button>
       <Description
         onClose={onCloseDesc}
         isOpen={isOpenDesc}
@@ -63,16 +65,27 @@ export const Clickables = () => {
       >
         PROJECTS
       </Button>
-      {/* EMAIL CONTACT */}
       <Button
-        id="andrew-email"
+        id="andrew-github"
         variant="andrew"
         fontSize={['0.8em', '0.9em', '1em']}
         letterSpacing={3}
         as="a"
-        href="mailto:contactandrewhuynh@gmail.com"
+        href="https://github.com/wAndrewx"
       >
-        CONTACT
+        Github
+      </Button>
+      {/* ABOUT ME */}
+      <Button
+        id="andrew-about"
+        variant="andrew"
+        fontSize={['0.8em', '0.9em', '1em']}
+        letterSpacing={3}
+        onClick={() => {
+          onOpenDesc();
+        }}
+      >
+        About me
       </Button>
       <ProjectsContainer
         onClose={onCloseProjects}

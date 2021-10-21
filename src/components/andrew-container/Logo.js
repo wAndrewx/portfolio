@@ -13,7 +13,6 @@ export const Logo = () => {
   return (
     <Stack
       id="name-logo "
-      w="310px"
       isInline
       userSelect="none"
       onClick={() => {

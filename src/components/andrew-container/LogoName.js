@@ -14,9 +14,11 @@ export const LogoName = ({colorStroke,backgroundColor}) => {
       arrowShadowColor={backgroundColor}
     >
       <Text
-        fontSize="4em"
+        fontSize="2em"
         fontWeight="bold"
-        lineHeight={['55px']}
+        lineHeight={['30px']}
+        css={{ width: '100%', 'word-spacing': '200px' }}
+
       >
         ANDREW HUYNH
       </Text>
