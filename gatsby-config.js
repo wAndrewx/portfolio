@@ -5,8 +5,10 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     '@chakra-ui/gatsby-plugin',
     {
       resolve: 'gatsby-source-filesystem',
