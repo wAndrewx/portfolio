@@ -1,5 +1,5 @@
 import { Divider, Flex, Text } from '@chakra-ui/layout';
-import { Projects } from './Projects';
+import Projects from './Projects';
 import {
   ModalOverlay,
   ModalContent,
@@ -13,7 +13,7 @@ import { projects } from '../../info';
 import { whiten } from '@chakra-ui/theme-tools';
 import React from 'react';
 
-export const ProjectsContainer = ({
+export const ProjectsModal = ({
   onClose,
   isOpen,
   backgroundColor,
@@ -36,9 +36,7 @@ export const ProjectsContainer = ({
         colorStroke={colorStroke}
         mx={2}
       >
-        <ModalHeader fontSize="2em">
-          Projects
-        </ModalHeader>
+        <ModalHeader fontSize="2em">Projects</ModalHeader>
         <Divider></Divider>
         <ModalBody
           overflow="auto"

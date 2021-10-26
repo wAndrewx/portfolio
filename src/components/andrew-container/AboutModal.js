@@ -5,6 +5,7 @@ import { ModalBody } from '@chakra-ui/modal';
 import { ModalContent } from '@chakra-ui/modal';
 import { ModalOverlay } from '@chakra-ui/modal';
 import { Modal } from '@chakra-ui/modal';
+import { description } from '../../info';
 import React from 'react';
 
 export const Description = ({
@@ -13,11 +14,6 @@ export const Description = ({
   backgroundColor,
   colorStroke,
 }) => {
-  let description =
-    'I am a developer based in Toronto, Canada, who is currently a student ' +
-    'majoring in Computer Science. ' +
-    'I have a many interests which include, male fashion, cryptocurrency, political philosophy, gaming, weightlifting (pre covid) and building keyboards.';
-
   return (
     <Modal
       isCentered

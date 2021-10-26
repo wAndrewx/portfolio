@@ -5,15 +5,20 @@ import { Box, Grid, GridItem } from '@chakra-ui/layout';
 import { whiten } from '@chakra-ui/theme-tools';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 import React from 'react';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 
-export const Projects = ({
+function Projects({
   projectTitle,
   projectLink,
   projectDesc,
   projectTags,
   projectImg,
   projectGithubLink,
-}) => {
+  data,
+}) {
+  console.log('DATA:', data);
+  // const image = getImage(data.projectPost);
   return (
     <Box>
       <Grid
@@ -28,26 +33,30 @@ export const Projects = ({
           <Divider></Divider>
         </GridItem>
         {/* IMAGE OF PROJECT */}
-
         {projectImg && (
-          <GridItem rowStart={2} colSpan={2}>
+          <GridItem rowStart={2} colSpan={2} >
             <Image
-              fallbackSrc={projectImg}
+              src={projectImg}
               align="centre"
               fit="scale"
               aria-label="link to github repo for project"
-              alt="github_project"
+              alt="github project"
             ></Image>
           </GridItem>
         )}
+        {/* BUTTONS */}
         <GridItem colSpan="2" rowSpan="1">
           <Link href={projectLink}>
-            <Button variant='andrew' w="100%">Demo</Button>
+            <Button variant="andrew" w="100%">
+              Demo
+            </Button>
           </Link>
         </GridItem>
         <GridItem colSpan="2" rowSpan="1">
           <Link href={projectGithubLink}>
-            <Button variant='andrew' w="100%">Github</Button>
+            <Button variant="andrew" w="100%">
+              Github
+            </Button>
           </Link>
         </GridItem>
         {/* Description */}
@@ -90,4 +99,20 @@ export const Projects = ({
       </Grid>
     </Box>
   );
-};
+}
+
+// export const query = graphql`
+//   {
+//     projectPost: file(relativePath: { eq: "coinbalance.png" }) {
+//       childImageSharp {
+//         fluid(fit: COVER) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `;
+
+// console.log('QUERY:', query);
+
+export default Projects;

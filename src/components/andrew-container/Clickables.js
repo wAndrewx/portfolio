@@ -2,10 +2,10 @@ import { Button } from '@chakra-ui/button';
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { useDisclosure } from '@chakra-ui/hooks';
 import { Stack } from '@chakra-ui/layout';
-import { ProjectsContainer } from './ProjectsContainer';
 import { useMediaQuery } from '@chakra-ui/react';
-import { Description } from './Description';
+import { Description } from './AboutModal';
 import React from 'react';
+import { ProjectsModal } from './ProjectsModal';
 
 export const Clickables = () => {
   const backgroundColor = useColorModeValue('myLight', 'myDark');
@@ -27,7 +27,7 @@ export const Clickables = () => {
     <Stack direction="column" id="clickables">
       <Button
         id="andrew-linkedin"
-        variant="andrew"    
+        variant="andrew"
         fontSize={['0.8em', '0.9em', '1em']}
         letterSpacing={3}
         as="a"
@@ -87,7 +87,7 @@ export const Clickables = () => {
       >
         About me
       </Button>
-      <ProjectsContainer
+      <ProjectsModal
         onClose={onCloseProjects}
         isOpen={isOpenProjects}
         backgroundColor={backgroundColor}

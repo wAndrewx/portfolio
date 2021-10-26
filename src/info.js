@@ -12,7 +12,7 @@ export const projects = [
       'Express',
       'PostgreSQL',
     ],
-    image: './images/pomodomo.png',
+    image: '../../images/pomodomo.png',
     link: 'https://www.pomodomo.ca',
     projectGithubLink: 'https://github.com/khoaHyh/pomodomo',
   },
@@ -30,7 +30,7 @@ export const projects = [
       'AWS EC2',
       'PM2',
     ],
-    image: './images/coinbalance.png',
+    image: '../../images/coinbalance.png',
     link: 'coin-balance.vercel.app',
     projectGithubLink: 'https://github.com/wAndrewx/coin-wallet-data-server',
   },
@@ -49,7 +49,7 @@ export const projects = [
       'Mongoose',
       'Javascript',
     ],
-    image: './images/twitter-mock.jpg',
+    image: '../../images/twitter-mock.jpg',
     link: 'https://twittermock.netlify.app/',
     projectGithubLink: 'https://github.com/wAndrewx/kebab-api',
   },
@@ -59,8 +59,13 @@ export const projects = [
     description:
       'This was a project to display my other projects. It was designed in Figma by me (Andrew Huynh) and was intended to be minimal. This app gave me a better understanding to responsive UI designing, styling and an alternative way to learn CSS.',
     tags: ['Javascript', 'React', 'ChakraUI', 'Figma'],
-    image: './images/port.png',
+    image: '../../images/port.png',
     link: 'https://www.andrewhuynh.ca',
     projectGithubLink: 'https://github.com/wAndrewx/portfolio',
   },
 ];
+
+export const description =
+  'I am a developer based in Toronto, Canada, who is currently a student ' +
+  'majoring in Computer Science. ' +
+  'I have a many interests which include, male fashion, cryptocurrency, political philosophy, gaming, weightlifting (pre covid) and building keyboards.';
