@@ -1,6 +1,7 @@
 # Portfolio v1 designed by wAndrewx
 
 ## Built with
+* Gatsby
 * React
 * Chakra-UI
 
@@ -16,11 +17,12 @@
 
 ## TODO - List
 ---
+- [ ] Migration to gatsby - IN PROGRESS
+- [ ] Migration to TypeScript - IN PROGRESS
 - [ ] Still have to add a contact form 
-- [ ] Migration to gatsby 
 - [ ] Color Palette change
 - [ ] Reformat projects card
-- [ ] Migration to TypeScript
+
 
 
 
