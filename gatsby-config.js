@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    // siteUrl: 'https://www.yourdomain.tld',
-    title: 'portfolio',
+    siteUrl: 'https://www.andrewhuynh.ca',
+    title: 'Andrew Huynh | Software Developer',
+    description: "Software developer based in Toronto, Canada"
   },
   plugins: [
     'gatsby-plugin-sitemap',
