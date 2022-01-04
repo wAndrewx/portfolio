@@ -5,24 +5,22 @@ import { ModalBody } from '@chakra-ui/modal';
 import { ModalContent } from '@chakra-ui/modal';
 import { ModalOverlay } from '@chakra-ui/modal';
 import { Modal } from '@chakra-ui/modal';
+import React from 'react';
 
-export const Description = ({
+export const ContentModal = ({
+  title,
+  content,
   onClose,
   isOpen,
   backgroundColor,
   colorStroke,
 }) => {
-  let description =
-    'I am a developer based in Toronto, Canada, who is currently a student ' +
-    'majoring in Computer Science. ' +
-    'I have a many interests which include, male fashion, cryptocurrency, political philosophy, gaming, weightlifting (pre covid) and building keyboards.';
-
   return (
     <Modal
       isCentered
       onClose={onClose}
       isOpen={isOpen}
-      motionPreset="scale"
+      motionPreset="slideInBottom"
       scrollBehavior={'inside'}
     >
       <ModalOverlay />
@@ -32,9 +30,9 @@ export const Description = ({
         mx={2}
       >
         <ModalHeader fontSize="2.5em" lineHeight={1}>
-          Quick biography
+          {title}
         </ModalHeader>
-        <ModalBody fontSize="1.1em">{description}</ModalBody>
+        <ModalBody fontSize="1.1em">{content}</ModalBody>
         <ModalFooter alignSelf="start">
           <Button
             variant="andrew"

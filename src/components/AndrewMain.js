@@ -1,30 +1,50 @@
 import { Box, Flex } from '@chakra-ui/react';
-import { Social } from './andrew-container/Social';
-import { Clickables } from './andrew-container/Clickables';
-import { Logo } from './andrew-container/Logo';
+import React, { useState } from 'react';
+import { useMediaQuery } from '@chakra-ui/media-query';
+import { About } from './andrew-container/about/About';
+import { Navigation } from './Navigation';
+import { Content } from './Content';
+import { projects } from '../info';
+import Projects from './andrew-container/projects/Projects';
+import { Contact } from './andrew-container/contact/Contact';
 
 export const AndrewMain = () => {
+  const [isDesktop] = useMediaQuery('(min-width: 968px)');
+  const [mainIndex, setMainIndex] = useState(0);
+
+  console.log({ isDesktop });
+  const [page, setPage] = useState([
+    <About />,
+    projects.map(project => {
+      return (
+        <Projects
+          projectTitle={project.title}
+          projectDesc={project.description}
+          projectTags={project.tags}
+          projectImg={project.image}
+          projectGithubLink={project.projectGithubLink}
+          projectLink={project.link}
+          key={('project;', project.id)}
+        />
+      );
+    }),
+    <Contact />,
+  ]);
+  const [title, setTitle] = useState(['About', 'Projects', 'Contact']);
+
+  const handleChangeInfo = index => {
+    setMainIndex(index);
+  };
+
   return (
-    <Flex
-      direction="column"
-      justify="center"
-      h={['md', 'md', 'lg', 'xl']}
-      w={['s', 'md', 'lg', 'xl']}
-      px={4}
-      alignItems="center"
-      rounded="lg"
-      boxShadow="xl"
-    >
-      <Box
-        d="flex"
-        flexDirection="column"
-        justifyContent="space-evenly"
-        h="100%"
-        mx={2}
-      >
-        <Logo />
-        <Social />
-        <Clickables />
+    <Flex h={isDesktop ? '100vh' : 'lg'} w={isDesktop ? '4xl' : 'xs'}>
+      <Box w="xs">
+        <Navigation handleChangeInfo={handleChangeInfo} />
+      </Box>
+      <Box w={isDesktop ? 'fit-content' : '0'}>
+        {isDesktop && (
+          <Content page={page[mainIndex]} title={title[mainIndex]} />
+        )}
       </Box>
     </Flex>
   );

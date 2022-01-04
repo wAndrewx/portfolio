@@ -1,32 +1,26 @@
+import { mode } from '@chakra-ui/theme-tools';
+
 export const ButtonStyles = {
   // Styles for the base style
-  baseStyle: {
+  baseStyle: props => ({
     px: '0px',
     letterSpacing: '0.19em',
-    color: 'tertiary',
     fontWeight: 'light',
-    border: '1px',
     justifyContent: 'center',
-    textTransform: "uppercase",
-  },
+    textTransform: 'uppercase',
+    backgroundColor: mode('blackAlpha.300', 'whiteAlpha.300')(props),
+  }),
   // Styles for the size variations
-  sizes: {
-    
-  },
+  sizes: {},
   // Styles for the visual style variations
   variants: {
     andrew: {
-      borderRadius: '4',
+      borderRadius: 'md',
       _hover: {
         transform: 'scale(1.08)',
-      },
-      __focus: {
-        boxShadow: 'lg',
       },
     },
   },
   // The default `size` or `variant` values
-  defaultProps: {
-    
-  },
+  defaultProps: {},
 };

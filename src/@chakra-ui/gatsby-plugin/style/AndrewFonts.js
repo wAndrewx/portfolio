@@ -1,9 +1,9 @@
-import { Global } from "@emotion/react"
-
-export const AndrewFonts = () => (
+import { Global } from '@emotion/react';
+import React from 'react';
+export const AndrewFonts = () => {
+  return (
     <Global
-        styles={
-            ` @font-face{
+      styles={` @font-face{
                 font-family: 'Kollektif';
                 font-styles: normal;
                 font-display: swap;
@@ -20,4 +20,5 @@ export const AndrewFonts = () => (
             }
             `}
     />
-)
+  );
+};
