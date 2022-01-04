@@ -1,7 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
 import { ButtonStyles as Button } from './components/buttonStyles';
 import { mode } from '@chakra-ui/theme-tools';
-// import customStyle as chakraStyle from src
 
 const config = {
   initialColorMode: 'light',
@@ -10,9 +9,10 @@ const config = {
 export const andrewTheme = extendTheme({
   config,
   colors: {
-    myDark: '#101010',
+    myDark: '#080808',
     myLight: '#FFFFFF',
-    // highlight: '#A71734',
+    myDark2: '#121212',
+    highlight: '#5b0e96',
   },
   fonts: {
     heading: 'Kollektif-Bold',
@@ -24,8 +24,8 @@ export const andrewTheme = extendTheme({
   styles: {
     global: props => ({
       body: {
-        color: mode('myDark', 'myLight')(props),
-        bg: mode('myLight', 'myDark')(props),
+        color: mode('myDark2', 'myLight')(props),
+        bg: mode('myLight', 'myDark2')(props),
       },
     }),
   },

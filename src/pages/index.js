@@ -1,13 +1,13 @@
 import App from '../components/App';
-import * as React from "react"
-
+import * as React from 'react';
 
 function Index() {
   return (
-    <>
-        <App />
-    </>
+    <div>
+      <App />
+    </div>
   );
 }
 
 export default Index;
+
