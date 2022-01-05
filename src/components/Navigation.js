@@ -10,11 +10,11 @@ import { SocialButtons } from './andrew-container/nav/SocialButtons';
 
 export const Navigation = props => {
   return (
-    <Stack h="100%" w="100%" p="8" spacing="8">
-      <Box>
+    <Stack h="100%" w="100%" p="8" spacing="8" className='nav'>
+      <Box className='nav-logo'>
         <Logo />
       </Box>
-      <Box>
+      <Box className='nav-buttons'>
         <NavigationButtons handleChangeInfo={props.handleChangeInfo} />
       </Box>
       <Stack direction="row" spacing="auto">
