@@ -7,7 +7,7 @@ const App = () => {
   return (
     <ChakraProvider theme={andrewTheme}>
       <Flex direction="column" justify="center" w="100vw" h="100vh">
-        <Flex direction="column" justifySelf="center" align="center">
+        <Flex direction="column" justifySelf="center" align="center" w='inherit' h='inherit'>
           <AndrewMain />
         </Flex>
       </Flex>

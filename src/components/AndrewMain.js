@@ -36,13 +36,19 @@ export const AndrewMain = () => {
   };
 
   return (
-    <Flex h={isDesktop ? '100vh' : 'lg'} w={isDesktop ? '4xl' : 'xs'} className='main-wrapper'>
-      <Box w="xs" id='main-nav'>
-        <Navigation handleChangeInfo={handleChangeInfo}  />
+    <Flex
+      h="inherit"
+      w={isDesktop ? '4xl' : '0'}
+      className="main-wrapper"
+      align={isDesktop ? 'flex-start' : 'center'}
+      justifyContent={'center'}
+    >
+      <Box w="xs" id="main-nav">
+        <Navigation handleChangeInfo={handleChangeInfo} />
       </Box>
       {isDesktop && (
-        <Box w="fit-content" id='main-content'>
-            <Content page={page[mainIndex]} title={title[mainIndex]} />
+        <Box w="fit-content" id="main-content">
+          <Content page={page[mainIndex]} title={title[mainIndex]} />
         </Box>
       )}
     </Flex>
