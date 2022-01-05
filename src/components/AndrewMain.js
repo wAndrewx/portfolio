@@ -40,11 +40,13 @@ export const AndrewMain = () => {
       <Box w="xs">
         <Navigation handleChangeInfo={handleChangeInfo} />
       </Box>
-      <Box w={isDesktop ? '100%' : '0'}>
-        {isDesktop && (
-          <Content page={page[mainIndex]} title={title[mainIndex]} />
-        )}
-      </Box>
+      {isDesktop && (
+        <Box w="100%">
+          {isDesktop && (
+            <Content page={page[mainIndex]} title={title[mainIndex]} />
+          )}
+        </Box>
+      )}
     </Flex>
   );
 };
