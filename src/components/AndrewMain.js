@@ -41,10 +41,8 @@ export const AndrewMain = () => {
         <Navigation handleChangeInfo={handleChangeInfo} />
       </Box>
       {isDesktop && (
-        <Box w="100%">
-          {isDesktop && (
+        <Box w="fit-content">
             <Content page={page[mainIndex]} title={title[mainIndex]} />
-          )}
         </Box>
       )}
     </Flex>
