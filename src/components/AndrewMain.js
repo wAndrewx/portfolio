@@ -12,7 +12,6 @@ export const AndrewMain = () => {
   const [isDesktop] = useMediaQuery('(min-width: 968px)');
   const [mainIndex, setMainIndex] = useState(0);
 
-  console.log({ isDesktop });
   const [page, setPage] = useState([
     <About />,
     projects.map(project => {
