@@ -40,7 +40,7 @@ export const AndrewMain = () => {
       <Box w="xs">
         <Navigation handleChangeInfo={handleChangeInfo} />
       </Box>
-      <Box w={isDesktop ? 'fit-content' : '0'}>
+      <Box w={isDesktop ? '100%' : '0'}>
         {isDesktop && (
           <Content page={page[mainIndex]} title={title[mainIndex]} />
         )}
