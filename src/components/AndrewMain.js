@@ -43,11 +43,11 @@ export const AndrewMain = () => {
       align={isDesktop ? 'flex-start' : 'center'}
       justifyContent={'center'}
     >
-      <Box w="xs" id="main-nav">
+      <Box w="xs" id="main-nav" h='100%'>
         <Navigation handleChangeInfo={handleChangeInfo} />
       </Box>
       {isDesktop && (
-        <Box w="fit-content" id="main-content">
+        <Box w="fit-content" h='100%' id="main-content">
           <Content page={page[mainIndex]} title={title[mainIndex]} />
         </Box>
       )}
