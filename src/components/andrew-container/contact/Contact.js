@@ -14,7 +14,7 @@ import { InputForm } from './InputForm';
 export const Contact = props => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [input, setInput] = useState('');
-  const [isDesktop] = useMediaQuery('(min-width:968px)');
+  const [isDesktop] = useMediaQuery('(min-width:62em)');
 
   const handleInputChange = e => setInput(e.target.value);
 

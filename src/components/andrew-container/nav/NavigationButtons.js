@@ -16,7 +16,7 @@ import { Contact } from '../contact/Contact';
 export const NavigationButtons = ({ handleChangeInfo }) => {
   const backgroundColor = useColorModeValue('myLight', 'myDark');
   const colorStroke = useColorModeValue('myDark', 'myLight');
-  const [isDesktop] = useMediaQuery('(min-width:968px)');
+  const [isDesktop] = useMediaQuery('(min-width:62em)');
   const {
     isOpen: isOpenProjects,
     onOpen: onOpenProjects,

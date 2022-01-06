@@ -9,7 +9,7 @@ import Projects from './andrew-container/projects/Projects';
 import { Contact } from './andrew-container/contact/Contact';
 
 export const AndrewMain = () => {
-  const [isDesktop] = useMediaQuery('(min-width: 968px)');
+  const [isDesktop] = useMediaQuery('(min-width: 62em)');
   const [mainIndex, setMainIndex] = useState(0);
 
   const [page, setPage] = useState([
@@ -37,21 +37,15 @@ export const AndrewMain = () => {
 
   return (
     <Flex
-      h="100%"
-      w={isDesktop ? '4xl' : '0'}
+      h={'100%'}
+      w={['100%', '4xl']}
       className="main-wrapper"
       justifyContent={'center'}
+      alignItems={['center','start']}
     >
-      <Flex
-        w="xs"
-        id="main-nav"
-        h="100%"
-        display="flex"
-        direction={'column'}
-        justify={'center'}
-      >
+      <Box w="xs" id="main-nav" >
         <Navigation handleChangeInfo={handleChangeInfo} />
-      </Flex>
+      </Box>
       {isDesktop && (
         <Box w="fit-content" h="100%" id="main-content">
           <Content page={page[mainIndex]} title={title[mainIndex]} />

@@ -19,7 +19,7 @@ function Projects({
   projectGithubLink,
 }) {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [isDesktop] = useMediaQuery('(min-width:968px)');
+  const [isDesktop] = useMediaQuery('(min-width:62em)');
   const data = useStaticQuery(graphql`
     {
       allFile(filter: { sourceInstanceName: { eq: "images" } }) {
