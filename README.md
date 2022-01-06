@@ -1,12 +1,11 @@
-# Portfolio v1 designed by wAndrewx
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e124d3e6-d24d-4306-9816-f44d5548b572/deploy-status)](https://app.netlify.com/sites/gallant-panini-e83aac/deploys)
+# Portfolio v2 designed by wAndrewx
 
 ## Built with
 * Gatsby
 * React
 * Chakra-UI
 
-## Designed with
-* Figma
 
 ### Icons provided by
 ---
@@ -17,11 +16,11 @@
 
 ## TODO - List
 ---
-- [ ] Migration to gatsby - IN PROGRESS
+- [x] Migration to gatsby - IN PROGRESS
 - [ ] Migration to TypeScript - IN PROGRESS
-- [ ] Still have to add a contact form 
+- [x] Contact form
 - [ ] Color Palette change
-- [ ] Reformat projects card
+- [x] Reformat Projects card
 
 
 
