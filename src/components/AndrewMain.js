@@ -38,16 +38,22 @@ export const AndrewMain = () => {
   return (
     <Flex
       h="100%"
-      w="4xl"
+      w={isDesktop ? '4xl' : '0'}
       className="main-wrapper"
-      align={isDesktop ? 'flex-start' : 'center'}
       justifyContent={'center'}
     >
-      <Box w="xs" id="main-nav" h='100%'>
+      <Flex
+        w="xs"
+        id="main-nav"
+        h="100%"
+        display="flex"
+        direction={'column'}
+        justify={'center'}
+      >
         <Navigation handleChangeInfo={handleChangeInfo} />
-      </Box>
+      </Flex>
       {isDesktop && (
-        <Box w="fit-content" h='100%' id="main-content">
+        <Box w="fit-content" h="100%" id="main-content">
           <Content page={page[mainIndex]} title={title[mainIndex]} />
         </Box>
       )}
