@@ -37,8 +37,8 @@ export const AndrewMain = () => {
 
   return (
     <Flex
-      h="inherit"
-      w={isDesktop ? '4xl' : '0'}
+      h="100%"
+      w="4xl"
       className="main-wrapper"
       align={isDesktop ? 'flex-start' : 'center'}
       justifyContent={'center'}
@@ -54,3 +54,10 @@ export const AndrewMain = () => {
     </Flex>
   );
 };
+
+// display: flex;
+// align-items: flex-start;
+// -moz-box-pack: center;
+// justify-content: center;
+// height: inherit;
+// width: var(--chakra-sizes-4xl);

@@ -1,13 +1,21 @@
-import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { ChakraProvider, Flex, useMediaQuery } from '@chakra-ui/react';
 import { andrewTheme } from '../@chakra-ui/gatsby-plugin/style/andrewTheme';
 import { AndrewMain } from './AndrewMain';
 import React from 'react';
 
 const App = () => {
+  const [isDesktop] = useMediaQuery('(min-width: 968px)');
+
   return (
     <ChakraProvider theme={andrewTheme}>
       <Flex direction="column" justify="center" w="100vw" h="100vh">
-        <Flex direction="column" justifySelf="center" align="center" w='inherit' h='inherit'>
+        <Flex
+          direction="column"
+          justifySelf="center"
+          align="center"
+          h="100vh"
+          w="100vw"
+        >
           <AndrewMain />
         </Flex>
       </Flex>
