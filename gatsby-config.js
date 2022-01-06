@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.andrewhuynh.ca',
+    // url,
     title: 'Andrew Huynh | Software Developer',
-    description: "Software developer based in Toronto, Canada"
+    description: 'Software developer based in Toronto, Canada',
   },
   plugins: [
     'gatsby-plugin-sitemap',
@@ -21,6 +22,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-image',
+    `gatsby-plugin-react-helmet`,
     '@chakra-ui/gatsby-plugin',
     {
       resolve: 'gatsby-source-filesystem',

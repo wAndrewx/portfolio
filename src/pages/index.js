@@ -1,13 +1,14 @@
 import App from '../components/App';
 import * as React from 'react';
+import { Box } from '@chakra-ui/react';
+import { Helmet } from 'react-helmet';
 
 function Index() {
   return (
-    <div>
+    <Box w="100vw" h="100vh">
       <App />
-    </div>
+    </Box>
   );
 }
 
 export default Index;
-

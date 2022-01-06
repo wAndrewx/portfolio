@@ -9,10 +9,9 @@ import Projects from './andrew-container/projects/Projects';
 import { Contact } from './andrew-container/contact/Contact';
 
 export const AndrewMain = () => {
-  const [isDesktop] = useMediaQuery('(min-width: 968px)');
+  const [isDesktop] = useMediaQuery('(min-width: 62em)');
   const [mainIndex, setMainIndex] = useState(0);
 
-  console.log({ isDesktop });
   const [page, setPage] = useState([
     <About />,
     projects.map(project => {
@@ -37,15 +36,28 @@ export const AndrewMain = () => {
   };
 
   return (
-    <Flex h={isDesktop ? '100vh' : 'lg'} w={isDesktop ? '4xl' : 'xs'}>
-      <Box w="xs">
+    <Flex
+      h={'100%'}
+      w={['100%', '4xl']}
+      className="main-wrapper"
+      justifyContent={'center'}
+      alignItems={['center','start']}
+    >
+      <Box w="xs" id="main-nav" >
         <Navigation handleChangeInfo={handleChangeInfo} />
       </Box>
-      <Box w={isDesktop ? 'fit-content' : '0'}>
-        {isDesktop && (
+      {isDesktop && (
+        <Box w="fit-content" h="100%" id="main-content">
           <Content page={page[mainIndex]} title={title[mainIndex]} />
-        )}
-      </Box>
+        </Box>
+      )}
     </Flex>
   );
 };
+
+// display: flex;
+// align-items: flex-start;
+// -moz-box-pack: center;
+// justify-content: center;
+// height: inherit;
+// width: var(--chakra-sizes-4xl);

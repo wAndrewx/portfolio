@@ -7,18 +7,23 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { AnimationWrapper } from '../AnimationWrapper';
 import { InputForm } from './InputForm';
 
 export const Contact = props => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [input, setInput] = useState('');
-  const [isDesktop] = useMediaQuery('(min-width:968px)');
+  const [isDesktop] = useMediaQuery('(min-width:62em)');
 
   const handleInputChange = e => setInput(e.target.value);
 
   return (
     <AnimationWrapper>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Andrew Huynh | Contact</title>
+      </Helmet>
       <Box
         p={8}
         borderRadius="md"
