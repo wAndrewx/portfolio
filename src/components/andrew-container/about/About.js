@@ -24,7 +24,7 @@ export const About = props => {
           <Text fontSize="1.3em">
             Software developer based in Toronto, Canada. Working mainly with
             Typescript as a fullstack developer with a focus on backend
-            processes and branching into DevOps practices. Passionate about fitness, keyboard building, music,and gaming.
+            processes and branching into Cloud Engineering with AWS. Passionate about fitness, keyboard building, music,and gaming.
           </Text>
         </Box>
     </AnimationWrapper>
