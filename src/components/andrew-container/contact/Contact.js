@@ -11,9 +11,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { AnimationWrapper } from '../AnimationWrapper';
 import { InputForm } from './InputForm';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-
-
 
 export const Contact = props => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -27,42 +24,13 @@ export const Contact = props => {
   const handleEmailChange = e => setInputEmail(e.target.value);
   const handleMessageChange = e => setInputMessage(e.target.value);
 
-  const { executeRecaptcha } = useGoogleReCaptcha();
 
   // Create an event handler so you can call the verification on button click event or form submit
-  const handleReCaptchaVerify = useCallback(async () => {
-    if (!executeRecaptcha) {
-      console.log('Execute recaptcha not yet available');
-      return;
-    }
 
-    try {
-      const token = await executeRecaptcha('submit');
-
-      const verify = await fetch(
-        'http://localhost:37165/.netlify/functions/grecaptcha',
-        {
-          method: 'POST',
-          mode: 'cors',
-          body: { token: token },
-        }
-      );
-
-      console.log({ verify });
-      console.log({ token });
-    } catch (error) {
-      console.log({ error });
-    }
-  }, []);
-
-  useEffect(() => {
-    handleReCaptchaVerify();
-  }, [handleReCaptchaVerify]);
 
   const handleEmailForm = e => {
     e.preventDefault();
 
-    handleReCaptchaVerify();
 
     if (inputMessage.length <= 500) {
       const emailData = { inputName, inputEmail, inputMessage };
@@ -115,6 +83,7 @@ export const Contact = props => {
               handleInput={handleMessageChange}
               input={inputMessage}
               errorText="Please provide a message"
+              isMessageDisabled={}
             />
           </Flex>
 
@@ -122,10 +91,6 @@ export const Contact = props => {
             my="2"
             variant="andrew"
             type="submit"
-            className="g-recaptcha"
-            data-sitekey="6Ld6IC4eAAAAAKNbmEZ2S0oYs3RdioRlsA9b4SSX"
-            // data-callback="su"
-            data-action="submit"
           >
             Submit
           </Button>
