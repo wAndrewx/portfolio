@@ -14,7 +14,7 @@ export const projects = [
     id: '2',
     title: 'Coin Balance',
     description: `Coin balance is app which displays current market data only on coins users currently own using MetaMask and
-    EthPlorer's API and keeps track of the number of visits per currency accessed.`,
+    EthPlorer's API and keeps track of the number of visits each currency users accessed.`,
     tags: ['Typescript', 'NextJS', 'SQL', 'NodeJS', 'AWS EC2'],
     image: 'coinbalance.png',
     link: 'coin-balance.vercel.app',
@@ -40,3 +40,5 @@ export const projects = [
     projectGithubLink: 'https://github.com/wAndrewx/portfolio',
   },
 ];
+
+export const career = [{}];

@@ -93,12 +93,20 @@ function Projects({
             {projectDesc}
           </Box>
           <Stack direction="row" pt="4">
-            <Button variant="andrew" size={isDesktop ? 'md' : 'sm'}>
+            <Button
+              variant="andrew"
+              size={isDesktop ? 'md' : 'sm'}
+              width={'100%'}
+            >
               <Link href={projectLink}>
                 <LinkIcon />
               </Link>
             </Button>
-            <Button variant="andrew" size={isDesktop ? 'md' : 'sm'}>
+            <Button
+              variant="andrew"
+              size={isDesktop ? 'md' : 'sm'}
+              width={'100%'}
+            >
               <Link href={projectGithubLink}>
                 <GithubIcon />
               </Link>
