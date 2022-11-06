@@ -49,7 +49,7 @@ export const NavigationButtons = ({ handleChangeInfo }) => {
   return (
     <Box>
       <AnimationWrapper>
-        <Stack direction="column" id="clickables">
+        <Stack direction="row" id="clickables">
           {/* EMAIL CONTACT */}
           <Button
             id="andrew-email"

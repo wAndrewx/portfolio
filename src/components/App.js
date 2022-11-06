@@ -1,25 +1,12 @@
-import { ChakraProvider, Flex } from '@chakra-ui/react';
-import { andrewTheme } from '../@chakra-ui/gatsby-plugin/style/andrewTheme';
+import { Flex } from '@chakra-ui/react';
 import { AndrewMain } from './AndrewMain';
 import React from 'react';
 
 const App = () => {
- 
-
   return (
-    <ChakraProvider theme={andrewTheme}>
-      <Flex direction="column" justify="center" w="100vw" h="100vh">
-        <Flex
-          direction="column"
-          justifySelf="center"
-          align="center"
-          h="100vh"
-          w="100vw"
-        >
-          <AndrewMain />
-        </Flex>
-      </Flex>
-    </ChakraProvider>
+    <Flex direction="column" w="100%" h='100%' px='8'>
+        <AndrewMain />
+    </Flex>
   );
 };
 

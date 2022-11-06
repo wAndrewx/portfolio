@@ -5,7 +5,7 @@ import { whiten } from '@chakra-ui/theme-tools';
 export const Content = props => {
   return (
     <Box
-      w="inherit"
+    w='100%'
       h="100%"
       overflowY="auto"
       css={props => ({
@@ -21,18 +21,10 @@ export const Content = props => {
         },
         scrollbarWidth: 'thin',
       })}
-      pr="8"
+     
       className="content-wrapper"
     >
-      <Text
-        py="8"
-        fontSize="2.3em"
-        fontWeight="bold"
-        lineHeight="44px"
-        className="content-header"
-      >
-        {props.title}
-      </Text>
+     
       <Box className="content-page">{props.page}</Box>
     </Box>
   );

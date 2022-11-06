@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import { About } from './andrew-container/about/About';
@@ -9,55 +9,39 @@ import Projects from './andrew-container/projects/Projects';
 import { Contact } from './andrew-container/contact/Contact';
 
 export const AndrewMain = () => {
-  const [isDesktop] = useMediaQuery('(min-width: 62em)');
-  const [mainIndex, setMainIndex] = useState(0);
-
-  const [page, setPage] = useState([
-    <About />,
-    projects.map(project => {
-      return (
-        <Projects
-          projectTitle={project.title}
-          projectDesc={project.description}
-          projectTags={project.tags}
-          projectImg={project.image}
-          projectGithubLink={project.projectGithubLink}
-          projectLink={project.link}
-          key={('project;', project.id)}
-        />
-      );
-    }),
-    <Contact />,
-  ]);
-  const [title, setTitle] = useState(['About', 'Projects', 'Contact']);
-
-  const handleChangeInfo = index => {
-    setMainIndex(index);
-  };
-
   return (
     <Flex
-      h={'100%'}
-      w={['100%', '4xl']}
       className="main-wrapper"
       justifyContent={'center'}
-      alignItems={['center','start']}
     >
-      <Box w="xs" id="main-nav" >
-        <Navigation handleChangeInfo={handleChangeInfo} />
-      </Box>
-      {isDesktop && (
-        <Box w="fit-content" h="100%" id="main-content">
-          <Content page={page[mainIndex]} title={title[mainIndex]} />
+      <Box w={['100%', '3xl']} id="main-content">
+        <Navigation />
+        <About />
+        <Box>
+          <Text
+            pb="8"
+            fontSize="2.3em"
+            fontWeight="bold"
+            lineHeight="44px"
+            className="content-header"
+          >
+            {'Personal Projects'}
+          </Text>
+          {projects.map(project => {
+            return (
+              <Projects
+                projectTitle={project.title}
+                projectDesc={project.description}
+                projectTags={project.tags}
+                projectImg={project.image}
+                projectGithubLink={project.projectGithubLink}
+                projectLink={project.link}
+                key={('project;', project.id)}
+              />
+            );
+          })}
         </Box>
-      )}
+      </Box>
     </Flex>
   );
 };
-
-// display: flex;
-// align-items: flex-start;
-// -moz-box-pack: center;
-// justify-content: center;
-// height: inherit;
-// width: var(--chakra-sizes-4xl);

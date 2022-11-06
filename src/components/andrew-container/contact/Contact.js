@@ -7,7 +7,6 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import { AnimationWrapper } from '../AnimationWrapper';
 import { InputForm } from './InputForm';
 
@@ -20,10 +19,6 @@ export const Contact = props => {
 
   return (
     <AnimationWrapper>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Andrew Huynh | Contact</title>
-      </Helmet>
       <Box
         p={8}
         borderRadius="md"

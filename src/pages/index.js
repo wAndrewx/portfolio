@@ -1,13 +1,18 @@
 import App from '../components/App';
 import * as React from 'react';
-import { Box } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import { Helmet } from 'react-helmet';
+import { andrewTheme } from '../@chakra-ui/gatsby-plugin/style/andrewTheme';
 
 function Index() {
   return (
-    <Box w="100vw" h="100vh">
+    <ChakraProvider theme={andrewTheme}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Andrew Huynh | Software Developer</title>
+      </Helmet>
       <App />
-    </Box>
+    </ChakraProvider>
   );
 }
 

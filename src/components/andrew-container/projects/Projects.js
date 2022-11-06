@@ -1,4 +1,4 @@
-import { Box, Badge, Flex, Link, Stack } from '@chakra-ui/layout';
+import { Box, Badge, Flex, Link, Stack, Text } from '@chakra-ui/layout';
 import { Button, Heading, useColorMode, useMediaQuery } from '@chakra-ui/react';
 import { whiten } from '@chakra-ui/theme-tools';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -8,7 +8,6 @@ import { GithubIcon } from '../../../icons/GitHubIcon';
 import { LinkIcon } from '@chakra-ui/icons';
 import { AnimationWrapper } from '../AnimationWrapper';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Helmet } from 'react-helmet';
 
 function Projects({
   projectTitle,
@@ -45,22 +44,16 @@ function Projects({
 
   return (
     <AnimationWrapper header="Projects">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Andrew Huynh | Projects</title>
-      </Helmet>
       <Flex
         direction={isDesktop ? 'row' : 'column-reverse'}
-        h={isDesktop ? '34vh' : '60vh'}
-        w="100%"
+        h={'100%'}
         mb="8"
         id="project-container"
       >
         <Flex
-          p="4"
+          p="8"
           id="project-info"
           w={isDesktop ? '33%' : '100%'}
-          h={isDesktop ? '100%' : '40%'}
           direction="column"
           bg={colorMode === 'light' ? 'blackAlpha.300' : 'whiteAlpha.300'}
           css={
@@ -83,19 +76,19 @@ function Projects({
           <Box
             overflowY="auto"
             flex="2"
-            css={props => ({
-              '&::-webkit-scrollbar': {
-                width: '4px',
-              },
-              '&::-webkit-scrollbar-track': {
-                width: '6px',
-              },
-              '&::-webkit-scrollbar-thumb': {
-                background: whiten('#101010', 40)(props),
-                borderRadius: '24px',
-              },
-              scrollbarWidth: 'thin',
-            })}
+            // css={props => ({
+            //   '&::-webkit-scrollbar': {
+            //     width: '4px',
+            //   },
+            //   '&::-webkit-scrollbar-track': {
+            //     width: '6px',
+            //   },
+            //   '&::-webkit-scrollbar-thumb': {
+            //     background: whiten('#101010', 40)(props),
+            //     borderRadius: '24px',
+            //   },
+            //   scrollbarWidth: 'thin',
+            // })}
           >
             {projectDesc}
           </Box>
@@ -143,9 +136,9 @@ function Projects({
             ></GatsbyImage>
           </Box>
 
-          <Box position="absolute" p="4">
+          <Box position="absolute" p="8">
             {projectTags.map((item, i) => (
-              <Badge key={(item, ':', i)} mr="1" borderRadius="md">
+              <Badge key={(item, ':', i)} mr="2" borderRadius="md">
                 {item}
               </Badge>
             ))}

@@ -15,8 +15,8 @@ export const andrewTheme = extendTheme({
     highlight: '#5b0e96',
   },
   fonts: {
-    heading: 'Kollektif-Bold',
-    body: 'Kollektif',
+    heading: `'Kollektif-Bold'`,
+    body: `'Kollektif'`,
   },
   components: {
     Button,
